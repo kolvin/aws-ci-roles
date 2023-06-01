@@ -1,0 +1,24 @@
+name: prod-ci-roles
+
+on:
+  push:
+    branches: [ main ]
+    paths: 
+      - 'environments/prod/global/**'
+  pull_request:
+    types: 
+      - assigned
+      - opened
+      - synchronize
+      - reopened
+    paths: 
+      - 'environments/prod/global/**'
+
+jobs:
+  terragrunt:
+    uses: kloud-cnf/workflows/.github/workflows/terragrunt.yaml@v0.3.0
+    with:
+      working-directory: "environments/prod/global/"
+      target-account-id: "310394544294"
+      target-region: "eu-west-1"
+      ci-role-name: "github-ci-role-provisioner"

@@ -41,7 +41,7 @@ terraform {
 generate "aws_provider" {
   path      = "_provider.tf"
   if_exists = "overwrite_terragrunt"
-  contents  = file("${get_parent_terragrunt_dir()}/templates/aws_provider.tf.tpl")
+  contents  = file("${get_parent_terragrunt_dir()}/templates/aws_provider.tf.tmpl")
 }
 
 generate "terragrunt_local_vars" {
