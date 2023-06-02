@@ -2,15 +2,7 @@ name: prod-ci-roles
 
 on:
   push:
-    branches: [ main ]
-    paths: 
-      - 'environments/prod/global/**'
-  pull_request:
-    types: 
-      - assigned
-      - opened
-      - synchronize
-      - reopened
+    branches: ["*"]
     paths: 
       - 'environments/prod/global/**'
 
