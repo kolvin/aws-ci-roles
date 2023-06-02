@@ -2,7 +2,6 @@ name: prod-ci-roles
 
 on:
   push:
-    branches: ["*"]
     paths: 
       - 'environments/prod/global/**'
 
