@@ -11,7 +11,7 @@ jobs:
       contents: read
       id-token: write
       pull-requests: write
-    uses: kloud-cnf/workflows/.github/workflows/terragrunt.yaml@v0.3.0
+    uses: kloud-cnf/workflows/.github/workflows/terragrunt.yaml@v0.3.1
     with:
       working-directory: "environments/prod/global/"
       target-account-id: "310394544294"
