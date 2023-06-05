@@ -4,6 +4,7 @@ on:
   push:
     paths: 
       - 'environments/prod/global/**'
+      - '.github/workflows/**-prod.yml'
 
 jobs:
   terragrunt:
