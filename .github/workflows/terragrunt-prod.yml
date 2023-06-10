@@ -5,6 +5,7 @@ on:
     paths: 
       - 'environments/prod/global/**'
       - '.github/workflows/**-prod.yml'
+      - 'common.hcl'
 
 jobs:
   terragrunt:
