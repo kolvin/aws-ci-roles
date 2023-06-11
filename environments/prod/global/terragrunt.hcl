@@ -14,36 +14,7 @@ inputs = {
           tags     = ["*"]
         }
       ]
-      managed_policies = ["AdministratorAccess", "AmazonS3FullAccess"]
+      managed_policies = ["AdministratorAccess"]
     }
-    // {
-    //   name_suffix = "s3-readwrite"
-    //   trusted_projects_refs = [
-    //     { 
-    //       paths = ["kolvin/cdn-assets"]
-    //       branches = ["*"]
-    //       tags = ["*"]
-    //     }
-    //   ]
-    //   managed_policies = ["AmazonS3FullAccess", "AdministratorAccess"]
-    // },
-    // {
-    //   name_suffix = "s3-readonly"
-    //   trusted_projects_refs = [
-    //     { 
-    //       paths = ["kolvin/cdn-assets"]
-    //       branches = ["*"]
-    //       tags = ["*"]
-    //     }
-    //   ]
-    //   templated_policy_statements = [
-    //     {
-    //       template = "s3-readonly"
-    //       values = {
-    //         paths: ["some-bucket-prefix/*"]
-    //       }
-    //     }
-    //   ]
-    // }
   ]
 }

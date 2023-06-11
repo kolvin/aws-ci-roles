@@ -1,0 +1,22 @@
+name: dev-ci-roles
+
+on:
+  pull_request:
+    branches: main
+    paths: 
+      - 'environments/dev/global/**'
+      - '.github/workflows/**-dev.yml'
+      - 'common.hcl'
+
+jobs:
+  terragrunt:
+    permissions:
+      contents: read
+      id-token: write
+      pull-requests: write
+    uses: kloud-cnf/workflows/.github/workflows/terragrunt.yaml@v0.3.4
+    with:
+      working-directory: "environments/dev/global/"
+      target-account-id: "943824751361"
+      target-region: "eu-west-1"
+      ci-role-name: "github-ci-role-provisioner"
