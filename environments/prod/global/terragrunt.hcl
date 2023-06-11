@@ -14,7 +14,7 @@ inputs = {
           tags     = ["*"]
         }
       ]
-      managed_policies = ["AdministratorAccess"]
+      managed_policies = ["AdministratorAccess", "AmazonSQSFullAccess"]
     }
   ]
 }
