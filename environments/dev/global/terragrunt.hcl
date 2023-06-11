@@ -14,7 +14,7 @@ inputs = {
           tags     = ["*"]
         }
       ]
-      managed_policies = ["AdministratorAccess", "AmazonS3FullAccess"]
+      managed_policies = ["AdministratorAccess"]
     }
     // {
     //   name_suffix = "s3-readwrite"
