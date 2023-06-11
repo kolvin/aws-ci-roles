@@ -1,7 +1,8 @@
 name: prod-ci-roles
 
 on:
-  push:
+  pull_request:
+    branches: main
     paths: 
       - 'environments/prod/global/**'
       - '.github/workflows/**-prod.yml'
@@ -13,7 +14,7 @@ jobs:
       contents: read
       id-token: write
       pull-requests: write
-    uses: kloud-cnf/workflows/.github/workflows/terragrunt.yaml@v0.3.3
+    uses: kloud-cnf/workflows/.github/workflows/terragrunt.yaml@v0.3.4
     with:
       working-directory: "environments/prod/global/"
       target-account-id: "310394544294"
