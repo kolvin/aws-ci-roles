@@ -150,6 +150,7 @@ fabric.properties
 ### Terraform ###
 # Local .terraform directories
 **/.terraform/*
+**/tgplan.out
 
 # .tfstate files
 *.tfstate
