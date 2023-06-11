@@ -32,7 +32,6 @@ terraform {
     commands  = ["apply"]
     arguments = ["${get_terragrunt_dir()}/tgplan.out"]
   }
-
   source = "git::https://github.com/kloud-cnf/terraform-aws-ci-iam-roles//?ref=v0.2.0"
 }
 
