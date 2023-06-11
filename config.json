@@ -1,0 +1,17 @@
+{
+	"aws": {
+		"home_region": "eu-west-1",
+		"accounts": {
+			"kloud": "016272825626",
+			"dev": "943824751361",
+			"prod": "310394544294",
+			"playground": "128335613984"
+		}
+	},
+	"base": {
+		"git_url": "https://github.com/kolvin/github-aws-ci-roles"
+	},
+	"terragrunt": {
+		"backend_filename": "_backend.tf"
+	}
+}
