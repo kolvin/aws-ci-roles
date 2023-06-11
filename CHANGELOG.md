@@ -1,3 +1,10 @@
+## [0.1.1](https://github.com/kolvin/github-aws-ci-roles/compare/v0.1.0...v0.1.1) (2023-06-11)
+
+
+### Bug Fixes
+
+* **iam:** remove redundant manged polices ([c9bcc83](https://github.com/kolvin/github-aws-ci-roles/commit/c9bcc834e45ecd9a8f61206d392dfce7b84031d3))
+
 # [0.1.0](https://github.com/kolvin/github-aws-ci-roles/compare/v0.0.0...v0.1.0) (2023-06-11)
 
 
