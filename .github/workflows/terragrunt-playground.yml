@@ -1,0 +1,24 @@
+name: playground-ci-roles
+
+on:
+  pull_request:
+    branches: main
+    paths: 
+      - 'environments/playground/global/**'
+      - '.github/workflows/**-playground.yml'
+      - 'common.hcl'
+  push:
+    branches: main
+
+jobs:
+  terragrunt:
+    permissions:
+      contents: read
+      id-token: write
+      pull-requests: write
+    uses: kloud-cnf/workflows/.github/workflows/terragrunt.yaml@v0.3.7
+    with:
+      working-directory: "environments/playground/global/"
+      target-account-id: "128335613984"
+      target-region: "eu-west-1"
+      ci-role-name: "github-ci-role-provisioner"
