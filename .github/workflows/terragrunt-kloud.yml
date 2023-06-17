@@ -1,0 +1,24 @@
+name: kloud-ci-roles
+
+on:
+  pull_request:
+    branches: main
+    paths: 
+      - 'environments/kloud/global/**'
+      - '.github/workflows/**-kloud.yml'
+      - 'common.hcl'
+  push:
+    branches: main
+
+jobs:
+  terragrunt:
+    permissions:
+      contents: read
+      id-token: write
+      pull-requests: write
+    uses: kloud-cnf/workflows/.github/workflows/terragrunt.yaml@v0.3.7
+    with:
+      working-directory: "environments/kloud/global/"
+      target-account-id: "016272825626"
+      target-region: "eu-west-1"
+      ci-role-name: "github-ci-role-provisioner"
