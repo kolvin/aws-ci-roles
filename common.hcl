@@ -32,7 +32,7 @@ terraform {
     commands  = ["apply"]
     arguments = ["${get_terragrunt_dir()}/tgplan.out"]
   }
-  source = "git::https://github.com/kloud-cnf/terraform-aws-ci-iam-roles//?ref=v0.3.0"
+  source = "git::https://github.com/kloud-cnf/terraform-aws-ci-iam-roles//?ref=v0.3.1"
 }
 
 # Generate an AWS provider block
