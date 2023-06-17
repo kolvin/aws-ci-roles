@@ -6,7 +6,7 @@ inputs = {
   platform = "github"
   roles = [
     {
-      name_suffix = "admin"
+      name_suffix = "infrastructure-provisoner" # https://catalog.workshops.aws/iam-policy-types/en-US/6-labs/lab2-cicd-role
       trusted_projects_refs = [
         {
           paths    = ["kolvin/kloud"]
@@ -14,36 +14,11 @@ inputs = {
           tags     = ["*"]
         }
       ]
-      managed_policies = ["AdministratorAccess"]
+      templated_policy_statements = [
+        {
+          template = "terraform-ci"
+        }
+      ]
     }
-    // {
-    //   name_suffix = "s3-readwrite"
-    //   trusted_projects_refs = [
-    //     { 
-    //       paths = ["kolvin/cdn-assets"]
-    //       branches = ["*"]
-    //       tags = ["*"]
-    //     }
-    //   ]
-    //   managed_policies = ["AmazonS3FullAccess", "AdministratorAccess"]
-    // },
-    // {
-    //   name_suffix = "s3-readonly"
-    //   trusted_projects_refs = [
-    //     { 
-    //       paths = ["kolvin/cdn-assets"]
-    //       branches = ["*"]
-    //       tags = ["*"]
-    //     }
-    //   ]
-    //   templated_policy_statements = [
-    //     {
-    //       template = "s3-readonly"
-    //       values = {
-    //         paths: ["some-bucket-prefix/*"]
-    //       }
-    //     }
-    //   ]
-    // }
   ]
 }

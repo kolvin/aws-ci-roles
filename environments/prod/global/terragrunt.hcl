@@ -6,7 +6,7 @@ inputs = {
   platform = "github"
   roles = [
     {
-      name_suffix = "admin"
+      name_suffix = "infrastructure-provisoner" # https://catalog.workshops.aws/iam-policy-types/en-US/6-labs/lab2-cicd-role
       trusted_projects_refs = [
         {
           paths    = ["kolvin/kloud"]
@@ -14,7 +14,11 @@ inputs = {
           tags     = ["*"]
         }
       ]
-      managed_policies = ["AdministratorAccess"]
+      templated_policy_statements = [
+        {
+          template = "terraform-ci"
+        }
+      ]
     }
   ]
 }

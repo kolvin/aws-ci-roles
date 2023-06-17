@@ -32,7 +32,7 @@ terraform {
     commands  = ["apply"]
     arguments = ["${get_terragrunt_dir()}/tgplan.out"]
   }
-  source = "git::https://github.com/kloud-cnf/terraform-aws-ci-iam-roles//?ref=v0.2.0"
+  source = "git::https://github.com/kloud-cnf/terraform-aws-ci-iam-roles//?ref=v0.2.1"
 }
 
 # Generate an AWS provider block
@@ -70,11 +70,12 @@ remote_state {
   backend = "s3"
 
   config = {
-    encrypt        = true
-    bucket         = "terraform-state-${local.aws_account_id}"
-    key            = "${join("/", compact([local.component, local.aws_region]))}/terraform.tfstate"
-    region         = "eu-west-1" # one state bucket per account, multi region support via file path
-    dynamodb_table = "terraform-state-lock-${local.aws_account_id}"
+    encrypt               = true
+    bucket                = "terraform-state-${local.aws_account_id}"
+    key                   = "${join("/", compact([local.component, local.aws_region]))}/terraform.tfstate"
+    region                = "eu-west-1" # one state bucket per account, multi region support via file path
+    dynamodb_table        = "terraform-state-lock-${local.aws_account_id}"
+    disable_bucket_update = true
   }
 
   generate = {
