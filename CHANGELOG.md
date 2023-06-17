@@ -1,3 +1,10 @@
+## [0.1.2](https://github.com/kolvin/github-aws-ci-roles/compare/v0.1.1...v0.1.2) (2023-06-17)
+
+
+### Bug Fixes
+
+* **iam, ci:** move away from admin access ([#3](https://github.com/kolvin/github-aws-ci-roles/issues/3)) ([c0a6dba](https://github.com/kolvin/github-aws-ci-roles/commit/c0a6dbaecedc6cd8d5f927a5961f90cfe9ada1be))
+
 ## [0.1.1](https://github.com/kolvin/github-aws-ci-roles/compare/v0.1.0...v0.1.1) (2023-06-11)
 
 
