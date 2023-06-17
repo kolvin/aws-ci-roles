@@ -1,3 +1,10 @@
+# [0.2.0](https://github.com/kolvin/github-aws-ci-roles/compare/v0.1.2...v0.2.0) (2023-06-17)
+
+
+### Features
+
+* **iam:** deploy infra CI role into playground account ([c46c330](https://github.com/kolvin/github-aws-ci-roles/commit/c46c330be5c2452084a647e0c03e17be6581ea17))
+
 ## [0.1.2](https://github.com/kolvin/github-aws-ci-roles/compare/v0.1.1...v0.1.2) (2023-06-17)
 
 
