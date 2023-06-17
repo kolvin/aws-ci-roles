@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/kolvin/github-aws-ci-roles/compare/v0.2.1...v0.3.0) (2023-06-17)
+
+
+### Features
+
+* **ci:** ci provisoner role for kloud account ([b6e286d](https://github.com/kolvin/github-aws-ci-roles/commit/b6e286df2a52e218b2e885d770aae3cc7e893428))
+
 ## [0.2.1](https://github.com/kolvin/github-aws-ci-roles/compare/v0.2.0...v0.2.1) (2023-06-17)
 
 
