@@ -1,3 +1,10 @@
+## [0.2.1](https://github.com/kolvin/github-aws-ci-roles/compare/v0.2.0...v0.2.1) (2023-06-17)
+
+
+### Bug Fixes
+
+* **ci:** create workflow for playground env ([72e47fe](https://github.com/kolvin/github-aws-ci-roles/commit/72e47fe42f587ab760e037624531d88361d94ecc))
+
 # [0.2.0](https://github.com/kolvin/github-aws-ci-roles/compare/v0.1.2...v0.2.0) (2023-06-17)
 
 
